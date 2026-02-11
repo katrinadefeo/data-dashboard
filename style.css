@@ -1,0 +1,26 @@
+body {
+    background-color: #fdf0d5;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#data-container {
+    width: 320px;
+    height: auto;
+    padding: 5px 5px 5px 5px;
+    background-color: #003049;
+    text-align: center;
+    color: #fdf0d5;
+    text-shadow: 1px 1px 2px #669bbc;
+    margin: 40px auto;
+    border-radius: 8px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#update-btn {
+    background-color: #c1121f;
+    color: white;
+    border-radius: 8px;
+    height: 30px;
+    margin: 30px 500px 30px 500px;
+    
+}
