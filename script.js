@@ -8,6 +8,7 @@ const statusMessage = document.getElementById("status-message");
 
 
 
+
 console.log("button found?", button);
 console.log("paragraph found?", paragraph);
 
@@ -17,21 +18,29 @@ button.addEventListener("click", function () {
   dataCount++;
   paragraph.textContent = `Total Records: ${dataCount}`;
   updateStatus();
+
 });
 
 resetButton.addEventListener("click", function () {
-  dataCount = 128;
+  dataCount = 0;
   paragraph.textContent = `Total Records: ${dataCount}`;
+  updateStatus();
 });
 
-function updateStatus() {
+function updateStatus(actionText = "") {
+  let statusText = "";
+
   if (dataCount < 5) {
-    statusMessage.textContent = "Status: Low Data";
+    statusText = "Status: Low Data";
   } else if (dataCount < 10) {
-    statusMessage.textContent = "Status: Moderate Data";
+    statusText = "Status: Moderate Data";
   } else {
-    statusMessage.textContent = "Status: High Data";
+    statusText = "Status: High Data";
   }
+
+  statusMessage.textContent = actionText
+    ? `${actionText} | ${statusText}`
+    : statusText;
 }
 
 
